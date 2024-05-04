@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(177, 223, 207);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.boton{
+    background-color: red;
+    color: aliceblue;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boton:hover{
+    background-color: blue;
+    color: brown;
+}
+
+.boton:active{
+    background-color: cadetblue;
+    color: yellow;
+}
+
+#parrafo1:target{
+    background-color: rgba(88, 159, 161, 0.4);
+
+}
+
+#parrafo2:target{
+    background-color: rgba(1, 16, 221, 0.4);
+
+}
+
+#parrafo3:target{
+    background-color: rgba(183, 212, 18, 0.4);
+}
+
+.texto1, .texto2, .texto3{
+    width: max-content;
+    display: flex;
+    background-color: bisque;
+    padding: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.texto1 p:first-child{*/
+/* .texto1 p:last-child{ */
+/* .texto1 p:nth-child(3) */
+/* .texto1 p:nth-last-child(n+2){ */
+/* .texto1 p:nth-child(odd) */
+/* .texto1 p:nth-child(even) */
+/* .texto1 p:nth-child(n+3) */
+.texto1 p:nth-child(n+3), .texto2 p:nth-child(n+3), .texto3 p:nth-child(n+3)
+{
+    background-color: rgb(160, 117, 201);
+    color: red;
+}
+
+.tabla{
+    border-collapse: collapse;
+    margin: 20px auto 50px;
+}
+
+.tabla th, td{
+    border: 3px solid red;
+}
+
+.tabla thead{
+    background-color: aqua;
+}
+
+.tabla tr:nth-child(odd){
+    background-color: aqua;
+    color: antiquewhite;
+    font-weight: 100;
+}
+
+.tabla td:nth-child(even){
+    background-color: rgb(2, 20, 20);
+    color: antiquewhite;
+    font-weight: 100;
+}
+
+.nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 40px;
+}
+
+.nombre li{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.nombre li:nth-child(even){
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.nombre li:nth-child(odd){
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.lista{
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+    list-style: none;
+}
+
+.lista li::before{
+    content: "👺";
+    padding-right: 15px;
+    margin-left: 30px;
+}
+
+.texto2 p::after{
+    content: "⚽";
+}
+
+.cuadro{
+    background-color: rgb(46, 235, 235);
+    width: max-content;
+    min-width: 200px;
+    box-shadow: 6px 6px 10px rgb(0, 0, 255);
+    padding: 10px;
+    margin: 40px auto;
+    position: relative;
+    text-align: center;
+}
+
+.cuadro::before{
+    width: 80px;
+    height: 30px;
+    content: "🟡🟢🔵";
+    position: absolute;
+    top: calc(50% - 15px);
+    right: calc(100% - 15px);
+
+}
+
+.cuadro::after{
+    width: 80px;
+    height: 30px;
+    content: "🔵🟢🟡";
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(100% - 0px);
+
+}
+
+.resp{
+   margin: 30px 50px;
+}
+
+label{
+    background-color: darkgreen;
+    padding: 10px;
+    color: azure;
+}
+
+/* Se utiliza con checkbox, radio o select */
+.resp:checked + label{
+    background-color: black;
+    color: aliceblue;
+}
